@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <mata charset = "utf-8"/>
+    <script>
+      function 伝言する(){
+        if(入力内容.value == ""){
+          alert("空入力やめて");
+        }else{
+          伝言エリア.innerText = 入力内容.value;
+          alert("伝言セット官僚");
+          画像.src = `https://chart.apis.google.com/chart?chs=150x150&cht=qr&chl=${入力内容.value}`
+          入力内容.value = null;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    伝言板<br>じょーじ
+    <p id = "伝言エリア">伝言はありません</p>
+    <p><input id = "入力内容"><button onclick = "伝言する();">セット</button>
+    <p><img id = "画像" alt ="ここにQRコードが生成される"></p>
+  </body>
+</html>
